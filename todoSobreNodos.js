@@ -48,4 +48,4 @@ $0.outerHTML
 const nuevoHTML = $0.outerHTML.replace('Ah perro!','HDSPM')
 //Guardamos el valor del bloque y reemplazamos el valor 'Ah perro!' por 'HDSPM'.
 $0.outerHTML = nuevoHTML
-//Le damos el valor del bloque de codigo original a nuestra codigo modificado e hicimos un XSS en nuestra pagina.
+//Le damos el valor a nuestro codigo modificado del bloque de codigo original e hicimos un XSS en nuestra pagina.
