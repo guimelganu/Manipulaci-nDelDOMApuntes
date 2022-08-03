@@ -15,12 +15,14 @@ $0.parentElement.removeChild($0)
 const referencia = document.querySelector('h2')
 referencia.remove()
 
-const padre = document.querySelector('div.py-5.text-center')
-undefined
+//El metodo replaceChild
+const padre3 = document.querySelector('div.py-5.text-center')
+//Creamos un nodo de referencia padre.
 const toReplace = document.querySelector('h2')
-undefined
+//Creamos el nodo a reemplazar.
 const nodeReemplazo = document.createElement('h1')
-undefined
+//Creamos el nodo por el que vamos a reemplazar.
 nodeReemplazo.textContent = "Form Checkout"
-'Form Checkout'
-padre.replaceChild(nodeReemplazo, toReplace)
+//Insertamos texto en nuestro nodo de reemplazo.
+padre3.replaceChild(nodeReemplazo, toReplace)
+//Reemplazamos haciendo referencia directa al padre, raplaceChild y dandole como parametro el nuevo nodo y el nodo que vamos a reemplazar.
