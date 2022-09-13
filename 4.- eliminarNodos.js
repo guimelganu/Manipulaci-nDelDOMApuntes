@@ -1,7 +1,7 @@
 const nodoAEliminar = $0
 //Creamos un nodo que eliminaremos
 const padre =$0
-//Creamos el nodo del padre del elemento a eliminar.
+//Creamos el nodo del padre directo del elemento a eliminar.
 padre.removeChild(nodoAEliminar)
 //Ejecutamos el evento utilizando el padre y pasando como parametro el nodo a eliminar.
 
@@ -15,7 +15,7 @@ $0.parentElement.removeChild($0)
 const referencia = document.querySelector('h2')
 referencia.remove()
 
-//El metodo replaceChild
+//El metodo replaceChild, se le da el padre,  el elemento de reemplazo y el elemento a reemplazar.
 const padre3 = document.querySelector('div.py-5.text-center')
 //Creamos un nodo de referencia padre.
 const toReplace = document.querySelector('h2')
@@ -25,4 +25,4 @@ const nodeReemplazo = document.createElement('h1')
 nodeReemplazo.textContent = "Form Checkout"
 //Insertamos texto en nuestro nodo de reemplazo.
 padre3.replaceChild(nodeReemplazo, toReplace)
-//Reemplazamos haciendo referencia directa al padre, raplaceChild y dandole como parametro el nuevo nodo y el nodo que vamos a reemplazar.
+//Reemplazamos haciendo referencia directa al padre, replaceChild y dandole como parametro el nuevo nodo y el nodo que vamos a reemplazar.
