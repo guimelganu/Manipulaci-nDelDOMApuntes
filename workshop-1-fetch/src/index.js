@@ -35,7 +35,6 @@ const peticion = async() => {
 //             const container = document.createElement('div');
 //             container.append(image, title, price);
 //             allData.push(container);
-            
 //         });
 //     appNode.append(...allData);
 //     });
