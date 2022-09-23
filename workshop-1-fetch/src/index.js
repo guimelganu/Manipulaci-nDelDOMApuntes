@@ -17,7 +17,7 @@ const peticion = async() => {
         container.append(image, title, price);
         allData.push(container);
     })
-    appNode.append(...allData);
+    appNode.append(...allData); 
 } 
 
 // const promesa = () => {
