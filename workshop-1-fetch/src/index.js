@@ -2,6 +2,7 @@ const url = "https://platzi-avo.vercel.app/api/avo";
 const baseUrl = "https://platzi-avo.vercel.app/";
 const appNode = document.querySelector('div#appNode');
 
+
 const peticion = async() => {
     const response = await fetch(url)
     const data = await response.json();
