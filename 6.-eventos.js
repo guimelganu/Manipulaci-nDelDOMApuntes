@@ -48,4 +48,11 @@ raiz.addEventListener('click', action);
 //*pero desencadenaria los listeners de los eventos mas arriba jerarquicamente.
 
 
+//!Tambien se puede detener la propagación de eventos:
+//!(Se recomienda no detener la propagación y dejar que el DOM funcione con normalidad)
 
+const titulo = getElementById('h3');
+titulo.addEventListener('click',(event) => {
+    event.stopPropagation();
+    console.log(`Hola desde: ${event.currentTarget.nodeName}`);
+})
