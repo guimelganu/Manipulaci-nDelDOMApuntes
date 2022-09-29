@@ -27,3 +27,25 @@ email.addEventListener('click', action1);
 email.addEventListener('click', action2);
 //!Eliminamos el segundo listener.
 email.removeEventListener('clicl', action2);
+
+//!Propagación, en palabras simples es el desencadenamiento
+//!de un evento para que se ejecuten otros eventos que dependen
+//!de ese primer elemento para ejecutarse.
+
+const hijo = getElementById('div');
+const padre = getElementById('section');
+const raiz = getElementById('body');
+
+const action = (event) => {
+    console.log(`Hola desde: ${event.currentTarget.nodeName}`);
+}
+
+hijo.addEventListener('click', action);
+padre.addEventListener('click', action);
+raiz.addEventListener('click', action);
+
+//*Si dieramos clic en cualquiera de ellos se ejecutaria el listener
+//*pero desencadenaria los listeners de los eventos mas arriba jerarquicamente.
+
+
+
