@@ -45,7 +45,7 @@ padre.addEventListener('click', action);
 raiz.addEventListener('click', action);
 
 //*Si dieramos clic en cualquiera de ellos se ejecutaria el listener
-//*pero desencadenaria los listeners de los eventos mas arriba jerarquicamente.
+//*pero desencadenaria los listeners de los eventos mas arriba jerarquicamente (Padres).
 
 
 //!Tambien se puede detener la propagación de eventos:
@@ -56,3 +56,17 @@ titulo.addEventListener('click',(event) => {
     event.stopPropagation();
     console.log(`Hola desde: ${event.currentTarget.nodeName}`);
 })
+
+//*Delegación de eventos.
+//*Se delega a un elemento padre que se encargue de escuchar el evento
+//*y que pase el evento a tos sus hijos.
+
+const appNode = document.querySelector('#app');
+
+//Se agrega un listener al padre
+appNode.addEventListener('click', (event) => {
+    //Retornara el "Hola", solo si el target del click es un H2
+    if (event.target.nodeName === "H2"){
+        window.alert("Hola");
+    }
+});
